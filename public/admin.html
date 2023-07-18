@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="admin.css">
+    <link rel="stylesheet" href="animate.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Admin Dashboard</h1>
+        <div id="users" class="box animate__animated animate__fadeIn">
+            <h2 class="subtitle">Connected Users</h2>
+        </div>
+        <div id="messages" class="box animate__animated animate__fadeIn">
+            <h2 class="subtitle">Messages</h2>
+        </div>
+        <div class="controls animate__animated animate__fadeIn">
+            <input id="input" type="text" placeholder="Type your message">
+            <button id="send">Send</button>
+            <div class="select">
+                <select id="mode">
+                    <option value="automated">Automated Responses</option>
+                    <option value="ai">AI Bot</option>
+                    <option value="agent">Agent</option>
+                </select>
+                <select id="user-select"></select>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
